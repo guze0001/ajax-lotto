@@ -38,13 +38,18 @@ h2 {
     background-color: #D8FFFF;
     color: #6C7F7F;
     box-shadow: 2px 1px 4px #D8FFFF;
-    display: none;
+/*    display: none;*/
     min-height: 25rem;
+    transform: translateX(-100%);
+    transition: transform 1s;
+    position: absolute;
 
 }
 
-.page.active {
-    display: block;
+.active {
+/*    display: block;*/
+    transform: translateX(0);
+    transition: transform 0,5s;
 }
 
 header {

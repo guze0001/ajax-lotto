@@ -25,28 +25,46 @@ let getNumbers = () => {
         })
         .then((jsonData) => {
             console.log(jsonData);
+
+            document.querySelector('#alert').classList.remove('active');
             let isDuplicated = checkDuplicatedNumbers(jsonData);
+
             if (isDuplicated) {
                 jsonData = null;
-                getNumbers();
+                throw new Error('duplicated');
             }
-            showTheResults(jsonData.numbers);
+
+            if (jsonData != null && jsonData.code == "0") {
+                showTheResults(jsonData.numbers);
+            } else throw new Error(jsonData.message);
         })
         .catch((err) => {
-            console.log('error:', err.message);
+            if (err.message == 'duplicated')
+                getNumbers();
+            else {
+                let alrt = document.querySelector("#alertContent");
+                document.querySelector('#list').classList.remove('active');
+                document.querySelector('#home').classList.remove('active');
+                document.querySelector('#alert').classList.add('active');
+                alrt.textContent = "Error! " + err.message;
+                alrt.style.display = "block";
+                console.log('error:', err.message);
+            }
         })
 }
 let goBack = () => {
     document.querySelector('#list').classList.remove('active');
-     let numList = document.querySelector('.num_list');
-    
-    numList.textContent="";
+    let numList = document.querySelector('.num_list');
+
+    numList.textContent = "";
     document.querySelector('#home').classList.add('active');
-   
+
 
 }
 document.getElementById('btnSend').addEventListener('click', getNumbers);
 document.getElementById('btnBack').addEventListener('click', goBack);
+document.getElementById('btnAlertBack').addEventListener('click', goBack);
+
 //getNumbers();
 
 let checkDuplicatedNumbers = (jsonData) => {

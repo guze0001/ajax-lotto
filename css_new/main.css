@@ -31,7 +31,7 @@ h2 {
 
 .page {
     max-width: 1400px;
-    width: 80%;
+    width: 100%;
     background-color: #D8FFFF;
     color: #6C7F7F;
     margin: 0 auto;
@@ -123,6 +123,7 @@ ul.num_list {
 
 @media only screen and (min-width: 25em) {
     /* small */
+    
     html {
         font-size: 100%;
         line-height: 1.3;
@@ -143,6 +144,7 @@ ul.num_list {
 
 @media only screen and (min-width: 38em) {
     /* medium */
+   
     html {
         font-size: 110%;
         line-height: 1.4;
@@ -224,6 +226,7 @@ ul.num_list {
         width: 80%;
         padding-left: 20%;
     }
+  
     .formBox {
         width: 50%;
         padding-top: 1rem;
@@ -287,6 +290,7 @@ ul.num_list {
 
 @media only screen and (min-width: 90em) {
     /* extra large */
+  
     html {
         font-size: 130%;
     }
@@ -350,4 +354,12 @@ ul.num_list {
         float: left;
     }
 
+}
+#alertContent{
+    color: red;
+    border: 1px solid #467F7F;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center
 }

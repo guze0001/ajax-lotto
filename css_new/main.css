@@ -21,7 +21,9 @@ body {
 h1 {
     font-size: 3rem;
     font-family: Bitter, 'Book Antiqua', Palatino, serif;
-    padding: 1rem 2rem;
+/*    padding: 1rem 1rem;*/
+    text-align: center;
+    width: 100%;
 }
 
 h2 {
@@ -31,28 +33,26 @@ h2 {
 }
 
 .page {
-    max-width: 1400px;
     width: 100%;
+    position: absolute;
+    height: auto;
+    min-height: 100%;
+
     background-color: #D8FFFF;
     color: #6C7F7F;
     margin: 0 auto;
     background-color: #D8FFFF;
     color: #6C7F7F;
     box-shadow: 2px 1px 4px #D8FFFF;
-/*    display: none;*/
-    min-height: 25rem;
     transform: translateX(-100%);
     transition: transform 1s;
-    position: absolute;
-     height: auto ; /* real browsers */
-  min-height: 100%; 
+
 
 }
 
 .active {
-/*    display: block;*/
     transform: translateX(0);
-    transition: transform 0,5s;
+    transition: transform 0, 5s;
 }
 
 header {
@@ -65,11 +65,11 @@ header {
 
 input,
 button {
-    width: 99%;
+    width: 98%;
     padding: 1rem 0.2rem;
     margin: 0.1rem 0.2rem;
     font-size: 2rem;
-   
+
 }
 
 button {
@@ -77,9 +77,9 @@ button {
     background-color: #50B2B2;
     color: #D8FFFF;
     box-shadow: 2px 1px 4px #111;
-     position: absolute;
-    bottom: .5rem;
-    left:1px;
+    position: relative;
+   top: 1rem;
+    display: block;
 }
 
 #btnSend:hover,
@@ -114,36 +114,36 @@ button {
 }
 
 ul.num_list {
-        width: 70%;
+    width: 70%;
     margin: 0 auto;
 }
 
 .num_list li {
-    border: solid #50B2B2 1px;
+    border: solid #50B2B2 2px;
+    border-radius: 10px;
     list-style: none;
     width: 3rem;
     padding: 1rem 1rem;
     text-align: center;
     margin: 1rem;
     float: left;
+
 }
 
 @media only screen and (min-width: 25em) {
     /* small */
-    
     html {
         font-size: 100%;
         line-height: 1.3;
     }
-   
+
     .num_list li {
-/*        margin: 2rem;*/
+        /*        margin: 2rem;*/
     }
 }
 
 @media only screen and (min-width: 38em) {
     /* medium */
-   
     html {
         font-size: 110%;
         line-height: 1.4;
@@ -182,9 +182,9 @@ ul.num_list {
         margin: 0.1rem 0.2rem;
         font-size: 1rem;
     }
-     button{
+    button {
         position: relative;
-         bottom: 0;
+        bottom: 0;
     }
     #btnSend {
         width: 100%;
@@ -205,9 +205,9 @@ ul.num_list {
         text-align: right;
         padding-top: 0.4rem;
     }
-    
+
     .num_list li {
-/*        margin: 2rem;*/
+        /*        margin: 2rem;*/
     }
 }
 
@@ -221,7 +221,7 @@ ul.num_list {
         width: 80%;
         padding-left: 20%;
     }
-  
+
     .formBox {
         width: 50%;
         padding-top: 1rem;
@@ -244,9 +244,10 @@ ul.num_list {
         padding: 0rem 0.2rem;
         margin: 0.1rem 0.2rem;
         font-size: 1rem;
-    } button{
+    }
+    button {
         position: relative;
-         bottom: 0;
+        bottom: 0;
     }
 
     #btnSend {
@@ -271,16 +272,15 @@ ul.num_list {
         padding-top: 0.4rem;
     }
 
-    
+
     .num_list li {
-/*        margin: .5rem;*/
+        /*        margin: .5rem;*/
     }
 
 }
 
 @media only screen and (min-width: 90em) {
     /* extra large */
-  
     html {
         font-size: 130%;
     }
@@ -311,9 +311,9 @@ ul.num_list {
         margin: 0rem auto;
         font-size: 1rem;
     }
-     button{
+    button {
         position: relative;
-         bottom: 0;
+        bottom: 0;
     }
 
     #btnSend {
@@ -335,13 +335,14 @@ ul.num_list {
         text-align: right;
         padding-top: 0.4rem;
     }
-   
+
     .num_list li {
-/*        margin: 1rem;*/
+        /*        margin: 1rem;*/
     }
 
 }
-#alertContent{
+
+#alertContent {
     color: red;
     border: 1px solid #467F7F;
     border-radius: 5px;

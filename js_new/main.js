@@ -72,7 +72,10 @@ let checkDuplicatedNumbers = (jsonData) => {
     let addedNumbers = [];
     let isDuplicated = false;
     numbers.forEach(function (num) {
-        if (addedNumbers.length > 0 && addedNumbers.indexOf(num) >= 0) {
+        
+        if (addedNumbers.length > 0 && //addedNumbers.indexOf(num) >= 0
+           addedNumbers.includes(num)
+           ) {
             console.log(num, 'is duplicated');
             isDuplicated = true;
         }
